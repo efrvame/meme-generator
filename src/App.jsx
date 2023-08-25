@@ -1,7 +1,9 @@
+import Navbar from "./components/Navbar";
+
 function App() {
     return (
         <>
-            <h1>Meme generator app</h1>
+            <Navbar />
         </>
     );
 }

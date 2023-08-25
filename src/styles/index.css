@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    font-family: "Karla", sans-serif;
 }
 
 h1,
@@ -11,4 +12,40 @@ h2,
 h3,
 p {
     margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 20px 0;
+    background: linear-gradient(90deg, #672280 0%, #a626d3 100%);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -2.075px;
+}
+
+.extra-title {
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* Media queries */
+@media (width > 768px) {
+    .container {
+        width: 60%;
+    }
 }
