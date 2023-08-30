@@ -5,6 +5,7 @@
 body {
     margin: 0;
     font-family: "Karla", sans-serif;
+    background-color: #a526d32e;
 }
 
 h1,
@@ -50,11 +51,15 @@ nav {
     font-weight: 500;
 }
 
+.meme-section {
+    padding: 2em;
+}
+
 .form {
     display: grid;
     grid-template: 2.5em 2.5em / 1fr 1fr;
     gap: 1em;
-    padding: 36px 0;
+    padding: 0;
 }
 
 .form--input {
@@ -87,7 +92,12 @@ nav {
 }
 
 .meme-image {
+    display: block;
     width: 100%;
+    max-width: 440px;
+    margin: 36px auto 0;
+    border-radius: 5px;
+    box-shadow: 0px 0 7px black;
 }
 
 /* Media queries */
