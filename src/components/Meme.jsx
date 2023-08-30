@@ -1,6 +1,16 @@
+import { useState } from "react";
+import memesData from "../data/memesData.js";
+
 function Meme() {
-    function handleClick() {
-        console.log("I was clicked!");
+    const memesArray = memesData.data.memes;
+    const [memeImage, setMemeImage] = useState(
+        "https://i.imgflip.com/30b1gx.jpg"
+    );
+
+    function getRandomMeme() {
+        let randomIndex = Math.floor(Math.random() * memesArray.length);
+        setMemeImage(memesArray[randomIndex].url);
+        console.log("Clicked");
     }
 
     return (
@@ -17,13 +27,11 @@ function Meme() {
                         placeholder="And take my money"
                         className="form--input"
                     ></input>
-                    <button className="form--btn" onClick={handleClick}>
+                    <button className="form--btn" onClick={getRandomMeme}>
                         Get a new meme image 🖼️
                     </button>
                 </form>
-                <div>
-                    <h1>Meme here</h1>
-                </div>
+                <img src={memeImage} className="meme-image" />
             </div>
         </section>
     );

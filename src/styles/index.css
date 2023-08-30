@@ -86,6 +86,10 @@ nav {
     cursor: pointer;
 }
 
+.meme-image {
+    width: 100%;
+}
+
 /* Media queries */
 @media (width >= 768px) {
     .container {
