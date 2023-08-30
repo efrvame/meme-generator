@@ -14,7 +14,7 @@ function Meme() {
     }
 
     return (
-        <section>
+        <section className="meme-section">
             <div className="container">
                 <form className="form">
                     <input
@@ -27,7 +27,11 @@ function Meme() {
                         placeholder="And take my money"
                         className="form--input"
                     ></input>
-                    <button className="form--btn" onClick={getRandomMeme}>
+                    <button
+                        type="button"
+                        className="form--btn"
+                        onClick={getRandomMeme}
+                    >
                         Get a new meme image 🖼️
                     </button>
                 </form>
