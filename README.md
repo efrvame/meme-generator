@@ -1,8 +1,15 @@
-# React + Vite
+# Meme generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app is built with `HTML`, `CSS`, `JavaScript` and `React`.
+It allows you to generate random memes from the imgfilp API
+and add top & bottom text to the image.
 
-Currently, two official plugins are available:
+By building this I learned more about the following concepts in React:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Event listeners
+-   State
+-   Conditional rendering
+-   Forms
+-   Side effects
+
+![Meme Generator App](/src/assets/Screenshot.png "Meme Generator app")
