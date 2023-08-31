@@ -2,15 +2,32 @@ import { useState } from "react";
 import memesData from "../data/memesData.js";
 
 function Meme() {
-    const memesArray = memesData.data.memes;
-    const [memeImage, setMemeImage] = useState(
-        "https://i.imgflip.com/30b1gx.jpg"
-    );
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "https://i.imgflip.com/30b1gx.jpg",
+    });
+
+    const [allMemeImages, setAllMemeImages] = useState(memesData);
 
     function getRandomMeme() {
-        let randomIndex = Math.floor(Math.random() * memesArray.length);
-        setMemeImage(memesArray[randomIndex].url);
-        console.log("Clicked");
+        const memesArray = allMemeImages.data.memes;
+        const randomIndex = Math.floor(Math.random() * memesArray.length);
+        const url = memesArray[randomIndex].url;
+
+        setMeme((prevMeme) => ({
+            ...prevMeme,
+            randomImage: url,
+        }));
+    }
+
+    function handleChange(event) {
+        const { name, value } = event.target;
+
+        setMeme((prevMeme) => ({
+            ...prevMeme,
+            [name]: value,
+        }));
     }
 
     return (
@@ -19,12 +36,18 @@ function Meme() {
                 <form className="form">
                     <input
                         type="text"
-                        placeholder="Shut up"
+                        placeholder="Top text"
+                        name="topText"
+                        value={meme.topText}
+                        onChange={handleChange}
                         className="form--input"
                     ></input>
                     <input
                         type="text"
-                        placeholder="And take my money"
+                        placeholder="Bottom text"
+                        name="bottomText"
+                        value={meme.bottomText}
+                        onChange={handleChange}
                         className="form--input"
                     ></input>
                     <button
@@ -35,7 +58,11 @@ function Meme() {
                         Get a new meme image 🖼️
                     </button>
                 </form>
-                <img src={memeImage} className="meme-image" />
+                <div className="meme">
+                    <img src={meme.randomImage} className="meme-image" />
+                    <h2 className="meme-text top">{meme.topText}</h2>
+                    <h2 className="meme-text bottom">{meme.bottomText}</h2>
+                </div>
             </div>
         </section>
     );
