@@ -91,6 +91,10 @@ nav {
     cursor: pointer;
 }
 
+.meme {
+    position: relative;
+}
+
 .meme-image {
     display: block;
     width: 100%;
@@ -98,6 +102,32 @@ nav {
     margin: 36px auto 0;
     border-radius: 5px;
     box-shadow: 0px 0 7px black;
+}
+
+.meme-text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+        -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000,
+        -2px 0 0 #000, 2px 2px 5px #000;
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
 }
 
 /* Media queries */
